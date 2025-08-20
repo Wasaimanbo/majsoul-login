@@ -48,3 +48,11 @@ for i in range(acccounts):
     sleep(20) #loading...
     print('Login success')
     driver.quit()
+
+        end_time = time.time()
+        execution_time = end_time - start_time
+
+        with open("log.txt", "a", encoding="utf-8") as log_file:
+            log_file.write(f"{current_time}-{'Success' if success else 'Failed'}-{execution_time:.2f}s\n")
+
+        print(f"Execution completed. Status: {'Success' if success else 'Failed'}, Time: {execution_time:.2f}s")
