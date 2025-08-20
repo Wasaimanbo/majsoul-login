@@ -12,6 +12,7 @@ acccounts = int(len(sys.argv[1:])/2)
 print(f'Config {acccounts} accounts')
 start_time = time.time()
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+success = False
 for i in range(acccounts):
     email = sys.argv[1+i]
     passwd = sys.argv[1+i+acccounts]
@@ -52,6 +53,7 @@ for i in range(acccounts):
     sleep(20) #loading...
     print('Login success')
     driver.quit()
+success = True
 
 end_time = time.time()
 execution_time = end_time - start_time
