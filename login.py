@@ -10,6 +10,8 @@ from selenium.webdriver.common.by import By
 
 acccounts = int(len(sys.argv[1:])/2)
 print(f'Config {acccounts} accounts')
+start_time = time.time()
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 for i in range(acccounts):
     email = sys.argv[1+i]
     passwd = sys.argv[1+i+acccounts]
